@@ -1,0 +1,151 @@
+{
+  "name": "GymFlex - Plantilla para Gimnasios",
+  "short_name": "GymFlex",
+  "description": "Una plantilla web modular y reutilizable para gimnasios, diseñada con un enfoque moderno, responsivo y energizante. Incluye secciones para clases, entrenadores, membresías, testimonios y más.",
+  "version": "1.0.0",
+  "author": "Altiora Tech",
+  "license": "MIT",
+  "homepage": "https://github.com/Altiora-Tech/gym-template.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Altiora-Tech/gym-template.git"
+  },
+  "keywords": [
+    "gimnasio",
+    "fitness",
+    "entrenamiento",
+    "react",
+    "tailwind",
+    "plantilla",
+    "responsive",
+    "typescript"
+  ],
+  "features": [
+    "Diseño completamente responsive",
+    "Modo oscuro integrado",
+    "Páginas pre-construidas",
+    "Componentes reutilizables",
+    "Optimización SEO",
+    "Rendimiento optimizado"
+  ],
+  "pages": [
+    {
+      "name": "Inicio",
+      "path": "/",
+      "description": "Página principal con vista general del gimnasio"
+    },
+    {
+      "name": "Clases",
+      "path": "/classes",
+      "description": "Listado de clases y horarios disponibles"
+    },
+    {
+      "name": "Entrenadores",
+      "path": "/trainers",
+      "description": "Conoce a nuestro equipo de entrenadores profesionales"
+    },
+    {
+      "name": "Membresías",
+      "path": "/membership",
+      "description": "Planes de membresía y precios"
+    },
+    {
+      "name": "Nutrición",
+      "path": "/nutrition",
+      "description": "Planes nutricionales y asesoramiento"
+    },
+    {
+      "name": "Blog",
+      "path": "/blog",
+      "description": "Artículos y consejos sobre fitness y salud"
+    },
+    {
+      "name": "Contacto",
+      "path": "/contact",
+      "path": "/contacto",
+      "description": "Formulario de contacto y ubicación"
+    }
+  ],
+  "technologies": {
+    "frontend": [
+      "React 18",
+      "TypeScript",
+      "Tailwind CSS",
+      "React Router",
+      "Vite"
+    ],
+    "styling": [
+      "Tailwind CSS",
+      "CSS3",
+      "PostCSS"
+    ],
+    "build": [
+      "Vite",
+      "TypeScript Compiler"
+    ]
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
+  "theme": {
+    "colors": {
+      "primary": "#3B82F6",
+      "secondary": "#10B981",
+      "accent": "#F59E0B",
+      "dark": "#1F2937",
+      "light": "#F9FAFB"
+    },
+    "fontFamily": {
+      "sans": ["Inter", "sans-serif"],
+      "display": ["Poppins", "sans-serif"]
+    }
+  },
+  "performance": {
+    "lighthouse": {
+      "performance": ">90",
+      "accessibility": ">90",
+      "best-practices": ">90",
+      "seo": ">90"
+    },
+    "bundleSize": "< 200KB (gzipped)"
+  },
+  "seo": {
+    "titleTemplate": "%s | GymFlex",
+    "defaultDescription": "Tu gimnasio de confianza con instalaciones modernas y entrenadores profesionales. Únete a nuestra comunidad fitness hoy mismo.",
+    "social": {
+      "twitter": "@gymflex",
+      "facebook": "gymflex"
+    }
+  },
+  "requestFramePermissions": [],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.10.0",
+    "react-icons": "^4.8.0",
+    "lucide-react": "^0.263.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "@vitejs/plugin-react": "^3.1.0",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.36.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7",
+    "typescript": "^4.9.5",
+    "vite": "^4.2.0"
+  }
+}

@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 💫 Variables de color personalizadas según el tema */
+@layer base {
+  :root {
+    --color-background: theme('colors.background.light');
+    --color-foreground: theme('colors.foreground.light');
+    --color-card: theme('colors.card.light');
+    --color-border: theme('colors.border.light');
+    --color-muted: theme('colors.muted.light');
+  }
+
+  .dark {
+    --color-background: theme('colors.background.dark');
+    --color-foreground: theme('colors.foreground.dark');
+    --color-card: theme('colors.card.dark');
+    --color-border: theme('colors.border.dark');
+    --color-muted: theme('colors.muted.dark');
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[var(--color-background)] text-[var(--color-foreground)] transition-colors duration-300;
+    font-family: 'Lato', sans-serif;
+  }
+}
