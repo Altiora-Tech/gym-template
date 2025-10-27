@@ -1,6 +1,7 @@
 import React from 'react';
 import { Trainer } from '../types';
 import { FiTwitter, FiInstagram, FiLinkedin } from '../components/icons';
+import { Link } from 'react-router-dom';
 
 const trainersData: Trainer[] = [
   { id: 1, name: 'Ana López', specialty: 'Entrenamiento de Fuerza', bio: 'Apasionada por ayudar a las personas a alcanzar su máximo potencial físico.', image: 'https://i.ibb.co/ghYZZPZ/pexels-amar-14673247.jpg', social: { twitter: '#', instagram: '#' } },
@@ -35,47 +36,47 @@ const TrainerCard: React.FC<{ trainer: Trainer }> = ({ trainer }) => (
             <div className="flex items-center justify-between">
               <div className="flex space-x-2">
                 {trainer.social.instagram && (
-                  <a 
-                    href={trainer.social.instagram} 
+                  <Link 
+                    to={trainer.social.instagram} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-white hover:text-primary transition-colors"
                     aria-label={`Instagram de ${trainer.name}`}
                   >
                     <FiInstagram size={18} />
-                  </a>
+                  </Link>
                 )}
                 {trainer.social.twitter && (
-                  <a 
-                    href={trainer.social.twitter} 
+                  <Link 
+                    to={trainer.social.twitter} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-white hover:text-primary transition-colors"
                     aria-label={`Twitter de ${trainer.name}`}
                   >
                     <FiTwitter size={18} />
-                  </a>
+                  </Link>
                 )}
                 {trainer.social.linkedin && (
-                  <a 
-                    href={trainer.social.linkedin} 
+                  <Link 
+                    to={trainer.social.linkedin} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-white hover:text-primary transition-colors"
                     aria-label={`LinkedIn de ${trainer.name}`}
                   >
                     <FiLinkedin size={18} />
-                  </a>
+                  </Link>
                 )}
               </div>
               
-              <a 
-                href="/contact" 
+              <Link 
+                to="/contact" 
                 className="inline-flex items-center bg-primary/90 hover:bg-primary text-white text-xs sm:text-sm font-semibold py-1.5 px-3 sm:py-2 sm:px-4 rounded-md transition-colors duration-200"
               >
                 Contactar
                 <span className="ml-1 hidden sm:inline">a {trainer.name.split(' ')[0]}</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -106,15 +107,15 @@ const Trainers: React.FC = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/50"
           >
             ¡Quiero Empezar Ahora!
             <svg className="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
