@@ -1,6 +1,6 @@
 import React from 'react';
 import { FiCheck, FiClock, FiAward, FiUsers, FiDollarSign, FiZap, FiHeart, FiStar, FiActivity } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const MembershipTier = ({ title, price, features, popular = false, recommended = false }) => (
   <div id="memberships" className={`relative flex flex-col p-6 sm:p-8 rounded-2xl border-2 ${popular ? 'border-primary shadow-lg' : 'border-gray-200 dark:border-gray-700'} h-full`}>
@@ -35,6 +35,7 @@ const MembershipTier = ({ title, price, features, popular = false, recommended =
       id="start-membership"
       name="start-membership"
       type="button"
+      // onClick={() => navigate('/memberships')}
       className={`mt-auto w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
       popular 
         ? 'bg-primary hover:bg-primary/90 text-white' 
@@ -56,6 +57,7 @@ const ServiceCard = ({ icon: Icon, title, description }) => (
 );
 
 const MembershipsPage: React.FC = () => {
+  const navigate = useNavigate();
   const membershipTiers = [
     {
       title: 'Básico',
@@ -293,19 +295,21 @@ const MembershipsPage: React.FC = () => {
             Únete a nuestra comunidad hoy mismo y da el primer paso hacia una vida más saludable.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button 
+            {/* <button 
               aria-label="View plans"
               id="view-plans"
               name="view-plans"
               type="button"
+              onClick={() => navigate('/memberships')}
               className="px-8 py-3 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
               Ver Planes
-            </button>
+            </button> */}
             <button 
               aria-label="Contact advisor"
               id="contact-advisor"
               name="contact-advisor"
               type="button"
+              onClick={() => navigate('/contact')}
               className="px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
               Contactar Asesor
             </button>
