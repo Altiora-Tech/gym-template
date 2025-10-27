@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const galleryImages = [
     { src: 'https://i.ibb.co/N6H8V9vm/area-pesas.jpg', alt: 'Área de pesas', span: 'col-span-2' },
@@ -40,9 +41,9 @@ const Gallery: React.FC = () => {
                     ))}
                 </div>
                 <div className="mt-12 text-center">
-                    <a href="/contact" className="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full text-lg transition-transform duration-300 ease-in-out transform hover:scale-105">
+                    <Link to="/contact" className="inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full text-lg transition-transform duration-300 ease-in-out transform hover:scale-105">
                         Agenda tu Recorrido
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

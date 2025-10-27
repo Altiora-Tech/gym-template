@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FiFacebook, FiTwitter, FiInstagram } from './icons';
 
 const Footer: React.FC = () => {
@@ -8,9 +9,9 @@ const Footer: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     {/* Logo & Quote */}
                     <div className="md:col-span-1">
-                        <a href="#inicio" className="text-3xl font-bold text-primary-DEFAULT mb-4 inline-block">
+                        <Link to="/" className="text-3xl font-bold text-primary-DEFAULT mb-4 inline-block">
                             GymFlex
-                        </a>
+                        </Link>
                         <p className="italic text-slate-400">"Tu cuerpo puede lograrlo. Convéncete tú."</p>
                     </div>
                     
@@ -18,11 +19,11 @@ const Footer: React.FC = () => {
                     <div>
                         <h4 className="font-bold text-foreground-dark uppercase tracking-wider mb-4">Accesos Rápidos</h4>
                         <ul className="space-y-2">
-                            <li><a href="/classes" className="hover:text-primary-DEFAULT transition-colors">Clases</a></li>
-                            <li><a href="/schedule" className="hover:text-primary-DEFAULT transition-colors">Horarios</a></li>
-                            <li><a href="/blog" className="hover:text-primary-DEFAULT transition-colors">Blog</a></li>
-                            <li><a href="/trainers" className="hover:text-primary-DEFAULT transition-colors">Entrenadores</a></li>
-                            <li><a href="/memberships" className="hover:text-primary-DEFAULT transition-colors">Membresías</a></li>
+                            <li><Link to="/classes" className="hover:text-primary-DEFAULT transition-colors block py-1">Clases</Link></li>
+                            <li><Link to="/schedule" className="hover:text-primary-DEFAULT transition-colors block py-1">Horarios</Link></li>
+                            <li><Link to="/blog" className="hover:text-primary-DEFAULT transition-colors block py-1">Blog</Link></li>
+                            <li><Link to="/trainers" className="hover:text-primary-DEFAULT transition-colors block py-1">Entrenadores</Link></li>
+                            <li><Link to="/memberships" className="hover:text-primary-DEFAULT transition-colors block py-1">Membresías</Link></li>
                            
                         </ul>
                     </div>
@@ -31,9 +32,9 @@ const Footer: React.FC = () => {
                     <div>
                         <h4 className="font-bold text-foreground-dark uppercase tracking-wider mb-4">Legal</h4>
                         <ul className="space-y-2">
-                            <li><a href="/privacy" className="hover:text-primary-DEFAULT transition-colors">Política de Privacidad</a></li>
-                            <li><a href="/terms" className="hover:text-primary-DEFAULT transition-colors">Términos y Condiciones</a></li>
-                            <li><a href="/cookies" className="hover:text-primary-DEFAULT transition-colors">Política de Cookies</a></li>
+                            <li><Link to="/privacy" className="hover:text-primary-DEFAULT transition-colors block py-1">Política de Privacidad</Link></li>
+                            <li><Link to="/terms" className="hover:text-primary-DEFAULT transition-colors block py-1">Términos y Condiciones</Link></li>
+                            <li><Link to="/cookies" className="hover:text-primary-DEFAULT transition-colors block py-1">Política de Cookies</Link></li>
                         </ul>
                     </div>
                     
@@ -46,9 +47,9 @@ const Footer: React.FC = () => {
                             <li className="pt-2"><a href="tel:+1234567890" className="hover:text-primary-DEFAULT">+1 (234) 567-890</a></li>
                         </ul>
                          <div className="flex space-x-4 mt-4">
-                            <a href="#" className="text-slate-400 hover:text-primary-DEFAULT transition-colors"><FiFacebook size={24} /></a>
-                            <a href="#" className="text-slate-400 hover:text-primary-DEFAULT transition-colors"><FiTwitter size={24} /></a>
-                            <a href="#" className="text-slate-400 hover:text-primary-DEFAULT transition-colors"><FiInstagram size={24} /></a>
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary-DEFAULT transition-colors"><FiFacebook size={24} /></a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary-DEFAULT transition-colors"><FiTwitter size={24} /></a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary-DEFAULT transition-colors"><FiInstagram size={24} /></a>
                         </div>
                     </div>
                 </div>

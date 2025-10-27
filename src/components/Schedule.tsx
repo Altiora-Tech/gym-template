@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ScheduleEntry } from '../types';
 
 const scheduleData: ScheduleEntry[] = [
@@ -62,9 +63,9 @@ const Schedule: React.FC = () => {
                     </table>
                 </div>
                 <div className="text-center mt-8">
-                    <a href="/contact" className="bg-primary-DEFAULT hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full text-lg transition-transform duration-300 ease-in-out transform hover:scale-105">
+                    <Link to="/contact" className="inline-block bg-primary-DEFAULT hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full text-lg transition-transform duration-300 ease-in-out transform hover:scale-105">
                         Reserva tu Clase Ahora
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>
